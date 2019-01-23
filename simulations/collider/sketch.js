@@ -1,4 +1,4 @@
-var square1, square2, size, collision, weight1, weight2, colour, colourMode, offset, speed, ready;
+var square1, square2, Gsize, collision, weight1, weight2, colour, colourMode, offset, speed, ready;
 let weight1Input, weight2Input, vInput, button;
  
 
@@ -27,7 +27,7 @@ function start() {
 	weight2 = weight2Input.value();
 	speed = vInput.value();
   offset = 50;
-  size = 200 * (1 / sqrt(weight2));
+  Gsize = 200 * (1 / sqrt(weight2));
   square1 = new square(width/4 + offset, height/2, weight1, 0);
   square2 = new square(3 * width/4 + offset, height/2, weight2, -speed);
   collision = 0;
@@ -71,14 +71,14 @@ function square(a,b,c,d) {
           this.y = b;
           this.m = c;
           this.v = d;
-          this.r = size * sqrt(this.m);
+          this.r = Gsize * sqrt(this.m);
           this.draw = function() {
                    fill(255-colour,colour,255);
                    rectMode(CENTER);
                    rect(this.x, this.y, this.r, this.r);
           }
           this.update = function() {
-						this.r = size * sqrt(this.m);
+						this.r = Gsize * sqrt(this.m);
             this.x += this.v;
           }
 }
