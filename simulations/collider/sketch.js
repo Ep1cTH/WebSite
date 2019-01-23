@@ -5,6 +5,7 @@ let weight1Input, weight2Input, vInput, button;
 function setup() {
 	ready = false;
 	createCanvas(400, 400);
+	background(200);
 	weight1Input = createInput();
 	weight2Input = createInput();
 	vInput = createInput();
