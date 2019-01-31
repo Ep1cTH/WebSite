@@ -27,7 +27,7 @@ function start() {
 	weight2 = weight2Input.value();
 	speed = vInput.value();
   offset = 50;
-  Gsize = 200 * (1 / sqrt(weight2));
+  Gsize = 50 * (1 / sqrt(weight2));
   square1 = new square(width/4 + offset, height/2, weight1, 0);
   square2 = new square(3 * width/4 + offset, height/2, weight2, -speed);
   collision = 0;
