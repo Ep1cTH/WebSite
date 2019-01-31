@@ -41,10 +41,10 @@ function draw() {
         fill(0);
         background(240);
         text(collision, 10, 10);
-        square1.draw();
-        square2.draw();
         square1.update();
         square2.update();
+        square1.draw();
+        square2.draw();
         print(square1.v);
         if (square1.x + square1.r / 2 + square2.r / 2 >= square2.x) {
             var temp = square1.v;
