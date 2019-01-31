@@ -34,8 +34,6 @@ function setup() {
 
 function draw() {
 
-    print(count);
-
     //TEST
 
     //snake[snake.length] = createVector(floor(sWidth / w / 2), floor(sHeight / w / 2));
@@ -73,8 +71,6 @@ function draw() {
         if (count == 0) {
 
             snake[snake.length] = createVector(oldFood.x, oldFood.y);
-
-            print(snake);
 
         }
 
