@@ -45,7 +45,7 @@ function draw() {
           square2.draw();
           square1.update();
           square2.update();
-          print(collision);
+		print(square1.v);
           if(square1.x + square1.r/2 + square2.r/2 >= square2.x) {
                    var temp = square1.v;
                    square1.v = ((square1.m - square2.m) * square1.v + 2 * square2.m * square2.v)/(square1.m + square2.m);
