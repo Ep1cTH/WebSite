@@ -3,37 +3,37 @@ let weight1Input, weight2Input, vInput, button;
  
 
 function setup() {
-	ready = false;
-	createCanvas(400, 400);
-	background(200);
-	weight1Input = createInput();
-	weight2Input = createInput();
-	vInput = createInput();
-	weight1Input.size(100,15);
-	weight2Input.size(100,15);
-	vInput.size(100,15);
-	weight1Input.position(25,10);
-	weight2Input.position(width/2 - 50,10);
-	vInput.position(width - 125,10);
-	button = createButton('START');
-	button.size(80,20);
-	button.position(width/2 - 40,40);
-	button.mousePressed(start);
-	noLoop();
+  ready = false;
+  createCanvas(400, 400);
+  background(200);
+  weight1Input = createInput();
+  weight2Input = createInput();
+  vInput = createInput();
+  weight1Input.size(100,15);
+  weight2Input.size(100,15);
+  vInput.size(100,15);
+  weight1Input.position(25,10);
+  weight2Input.position(width/2 - 50,10);
+  vInput.position(width - 125,10);
+  button = createButton('START');
+  button.size(80,20);
+  button.position(width/2 - 40,40);
+  button.mousePressed(start);
+  noLoop();
 }
 
 function start() {
-	weight1 = weight1Input.value();
-	weight2 = weight2Input.value();
-	speed = vInput.value();
+  weight1 = weight1Input.value();
+  weight2 = weight2Input.value();
+  speed = vInput.value();
   offset = 50;
   Gsize = 50 * (1 / sqrt(weight2));
   square1 = new square(width/4 + offset, height/2, weight1, 0);
   square2 = new square(3 * width/4 + offset, height/2, weight2, -speed);
   collision = 0;
   colour = 255;
-	ready = true;
-	loop();
+  ready = true;
+  loop();
 }
 
 function draw() {
