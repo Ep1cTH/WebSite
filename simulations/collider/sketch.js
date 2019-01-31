@@ -45,7 +45,6 @@ function draw() {
         square2.update();
         square1.draw();
         square2.draw();
-        print(square1.v);
         if (square1.x + square1.r / 2 + square2.r / 2 >= square2.x) {
             var temp = square1.v;
             square1.v = ((square1.m - square2.m) * square1.v + 2 * square2.m * square2.v) / (square1.m + square2.m);
@@ -80,6 +79,7 @@ function square(a, b, c, d) {
     this.update = function() {
         this.r = Gsize * sqrt(this.m);
         this.x += this.v;
+        print(this.v);
     }
 }
 
