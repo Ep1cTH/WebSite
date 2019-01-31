@@ -14,7 +14,7 @@ function setup() {
 
     sHeight = 600;
 
-    frameRate(10);
+    frameRate(60);
 
     dir = createVector(1, 0);
 
