@@ -79,7 +79,6 @@ function square(a, b, c, d) {
     this.update = function() {
         this.r = Gsize * sqrt(this.m);
         this.x += this.v;
-        print(this.v);
     }
 }
 
